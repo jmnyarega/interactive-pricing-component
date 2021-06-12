@@ -1,39 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="https://use.fontawesome.com/4ac2e5dc4b.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="top">
+        <img
+          class="top__img"
+          src="./images/pattern-circles.svg"
+          alt="pattern-circles"
+        />
+        <div class="top__content">
+          <h3 class="top__title title">Simple, traffic-based pricing</h3>
+          <p class="top__para">Sign-up for our 30-day trial.</p>
+          <p class="top__para">No credit card required.</p>
+        </div>
+      </section>
+      <section class="bottom">
+        <div>
+          <h3 class="bottom__title title">100K Pageviews</h3>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+          <div class="bottom__price-range">
+            <input type="range" name="price" id="price" />
+          </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+          <div class="bottom__price">
+            <span>$16.00</span>
+            <span>/ month</span>
+          </div>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+          <div class="bottom__cycle">
+            <div class="bottom__cycle-monthly">
+              <label for="type"> Monthly Billing </label>
+              <div class="custom-checkbox">
+                <input type="checkbox" name="label" id="label" />
+                <div class="checkbox">
+                  <label for="label"></label>
+                </div>
+              </div>
+            </div>
+            <div class="bottom__cycle-yearly">
+              <span>Yearly Billing</span>
+              <span class="label">-25%</span>
+            </div>
+          </div>
+        </div>
 
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div>
+          <div class="bottom__features">
+            <ul>
+              <li>Unlimited websited</li>
+              <li>100% data ownership</li>
+              <li>Email reports</li>
+            </ul>
+            <a href="#" class="button">Start my trial</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
+
