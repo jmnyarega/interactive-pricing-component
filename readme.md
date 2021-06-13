@@ -76,7 +76,7 @@
     1. checkbox
     3. slider
       - I took sometime creating this one, I learnt you can use these properties to style
-        the elements into your own liking.
+        the element into your own liking.
         
         ```
           -webkit-slider-runnable-track
