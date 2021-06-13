@@ -1,0 +1,36 @@
+.custom-checkbox {
+    input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .checkbox {
+        $padding: 0.25rem;
+        width: 3.5rem;
+        height: 1.5rem;
+        background: $grayish-blue;
+        border-radius: 99rem;
+        padding: $padding 0; /* place the circle in the center */
+        position: relative;
+
+        label {
+            position: absolute;
+            left: $padding; /* account for the padding */
+
+            /* create a circle */
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+
+            cursor: pointer;
+            background-color: $white;
+
+            transition: all ease-in-out 350ms;
+        }
+    }
+
+    input:checked + .checkbox label {
+        transform: translateX(2rem); // 1rem(width) + padding ( 0.5 + 0.5 )
+        transition: all ease-in-out 350ms;
+    }
+}

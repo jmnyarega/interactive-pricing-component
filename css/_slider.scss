@@ -1,0 +1,71 @@
+@mixin track($fill: 0) {
+    box-sizing: border-box;
+    border: none;
+    height: $track-h;
+    background: $light-grayish-blue;
+    border-radius: 99rem;
+
+    @if $fill == 1 {
+        .js & {
+            background: linear-gradient($strong-cyan, $strong-cyan)
+            0/ var(--sx) 100% no-repeat $light-grayish-blue
+        }
+    }
+}
+
+@mixin fill() {
+    height: $track-h;
+    background: $soft-cyan;
+    border-radius: 99rem;
+}
+
+@mixin thumb() {
+    border: none;
+    width: $thumb-d;
+    height: $thumb-d;
+    border-radius: 50%;
+    background: no-repeat center center url(../images/icon-slider.svg) $strong-cyan;
+
+    cursor: pointer;
+    box-shadow: 0 5px 10px 5px $soft-cyan;
+}
+
+[type="range"] {
+    &,
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+    }
+
+
+    width: $track-w;
+    height: $thumb-d;
+
+    &::-webkit-slider-runnable-track {
+        @include track;
+    }
+
+    &::-moz-range-track { @include track }
+    &::-ms-track { @include track }
+
+    &::-moz-range-progress { @include fill }
+    &::-ms-fill-lower { @include fill }
+
+    &::-webkit-slider-thumb {
+        margin-top: .5*($track-h - $thumb-d);
+        @include thumb
+    }
+    &::-moz-range-thumb { @include thumb }
+    &::-ms-thumb {
+        margin-top: 0;
+        @include thumb
+    }
+
+    &::-ms-tooltip {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 2px var(--impact);
+    }
+}

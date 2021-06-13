@@ -1,0 +1,142 @@
+.bottom {
+    padding: 2rem;
+    width: 90%;
+    max-width: 550px;
+    margin: -7rem auto;
+    box-shadow: 1px 1px 2px 2px #f1f5fe;
+    background-color: $white;
+    border-radius: 0.5rem;
+
+    position: relative;
+    z-index: 3;
+    color: $grayish-blue;
+
+    &__overview {
+        padding-bottom: 2rem;
+    }
+
+    &__price {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span:first-child {
+            font-size: 2rem;
+            padding-right: 0.5rem;
+            color: $dark-desaturated-blue;
+        }
+    }
+
+    &__price-range {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+
+    &__cycle {
+        display: flex;
+        justify-content: center;
+        column-gap: 0.7rem;
+        position: relative;
+        padding-bottom: 1.5rem;
+
+        &::after {
+            content: "";
+            background-color: #f1f5fe;
+            position: absolute;
+            top: 100%;
+            left: -2rem;
+            right: -2rem;
+            height: 1px;
+        }
+    }
+
+    &__cycle-monthly, &__cycle-yearly {
+        display: flex;
+        column-gap: 0.5rem;
+    }
+
+    &__cycle-yearly {
+        span:last-child {
+            align-self: flex-start;
+        }
+    }
+
+    &__features {
+        a {
+            margin-top: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li::before {
+            content: "\f00c";
+            font: normal normal normal 14px/1 FontAwesome;
+            padding-right: 0.5rem;
+            color: $strong-cyan;
+        }
+
+        li + li {
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .bottom {
+        text-align: initial;
+        &__overview {
+            display: grid;
+            grid-template-areas: "a b"
+                                 "c c"
+                                 "d d";
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            padding: 0;
+        }
+
+        &__title {
+            grid-area: a;
+            margin-bottom: 1rem;
+        }
+
+        &__price {
+            grid-area: b;
+            margin-bottom: 1rem;
+        }
+
+        &__price-range {
+            grid-area: c;
+            margin-bottom: 1rem;
+        }
+
+        &__cycle {
+            grid-area: d;
+        }
+
+        .bottom__features {
+            display: flex;
+            padding-top: 1.5rem;
+
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                margin: 0;
+            }
+        }
+    }
+}

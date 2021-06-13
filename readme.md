@@ -33,3 +33,57 @@
 - Mobile-first workflow
 
 ### What I learned
+ - I learned how to use grid-template-areas
+  
+  ```css
+      .grid {
+        display: grid;
+        grid-template-areas: "a a"
+                             "a b"
+                             "c c";
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+      }
+      
+      .box1 {
+        grid-area: a;
+      }
+      
+      .box2 {
+        grid-area: b;
+      }
+      
+      .box3 {
+        grid-area: c;
+      }
+  ```
+  
+  ```
+   ---------
+   |   a   |
+   ---------
+   | a | b |
+   ---------
+   |   c   |
+   ---------
+  ```
+
+  - creating a custom elements 
+    1. checkbox
+    3. slider
+      - I took sometime creating this one, I learnt you can use these properties to style
+        the elements into your own liking.
+        
+        ```
+          -webkit-slider-runnable-track
+          -webkit-slider-thumb
+          
+          -moz-range-track
+          -moz-range-progress
+          -moz-range-thumb
+          
+          -ms-fill-lower
+          -ms-track
+          -ms-thumb
+          -ms-tooltip
+        ```
