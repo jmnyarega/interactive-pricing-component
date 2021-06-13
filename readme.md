@@ -19,8 +19,8 @@
 
 ### Links
 
-- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactivepricingcomponent-ZDxw9D6W-))
-- Live Site URL: [Live Site](https://interactive-pricing-component-three-rust.vercel.app/))
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/interactivepricingcomponent-ZDxw9D6W-)
+- Live Site URL: [Live Site](https://interactive-pricing-component-three-rust.vercel.app/)
 
 ## My process
 
