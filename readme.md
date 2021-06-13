@@ -38,33 +38,37 @@
   ```css
       .grid {
         display: grid;
-        grid-template-areas: "a a"
-                             "a b"
-                             "c c";
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "a b"
+                             "a d"
+                             "c d";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
       }
       
       .box1 {
         grid-area: a;
       }
-      
+
       .box2 {
         grid-area: b;
       }
-      
+
       .box3 {
         grid-area: c;
+      }
+
+      .box4 {
+        grid-area: d;
       }
   ```
   
   ```
    ---------
-   |   a   |
-   ---------
    | a | b |
    ---------
-   |   c   |
+   | a | d |
+   ---------
+   | c | d |
    ---------
   ```
 
